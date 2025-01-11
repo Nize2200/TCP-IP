@@ -20,5 +20,6 @@
   This is preferred in bigger networks where changes often happen
 # [[2024-08-22.pdf]]
 ![[Pasted image 20241119171113.png]]
-- To easily recognize packets
-- To equaly divide resources
+First of RDT stands for realiable data transfer, meaning how do we make sure the reciver gets what the sender sent?
+- We introduce sequence numbers to make a "failsafe" incase the NAK or ACK response from the reciver is corrupted. if we didnt have sequance number we would not know what package to send again
+- The timer gets introduced to not have to deal with a NAK answer.  instead we will only recive a ACK once the package is delivered uncurropted and if we recive nothing the timer will run out and the package will be sent again.
